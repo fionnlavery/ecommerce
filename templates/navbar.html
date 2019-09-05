@@ -1,3 +1,7 @@
+
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
 <header id="htc__header" class="htc__header__area header--one">
     <!-- Start Mainmenu Area -->
     <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
@@ -144,6 +148,9 @@
                             <div class="header__account">
                                 <a href="{% url 'profile' %}"><i class="icon-user icons"></i></a>
                             </div>
+                            <div class="header__account">
+                                <a href="{% url 'logout' %}"><i class="icon-logout icons"></i></a>
+                            </div>
                             {% else %}
                             <li><a href="{% url 'register' %}">Register</a></li>
                             <li><a href="{% url 'login' %}">Log In</a></li>
@@ -151,10 +158,10 @@
                             <div class="htc__shopping__cart">
                                 <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
                                 <a href="#">
-                                            {% if product_count > 0 %}
-                                            <span class="htc__qua">{{ product_count }}</span>
-                                            {% endif %}
-                                            </a>
+                            {% if product_count > 0 %}
+                            <span class="htc__qua">{{ product_count }}</span>
+                            {% endif %}
+                            </a>
                             </div>
                         </div>
                     </div>
@@ -235,3 +242,41 @@
         </div>
     </div>
     <!-- End Search Popap -->
+            <!-- Start Cart Panel -->
+            <div class="shopping__cart">
+                <div class="shopping__cart__inner">
+                    <div class="offsetmenu__close__btn">
+                        <a href="#"><i class="zmdi zmdi-close"></i></a>
+                    </div>
+                    <div class="shp__cart__wrap">
+                        {% for item in cart_items %}
+                        {% csrf_token %}
+                        <div class="shp__single__product">
+                            <div class="shp__pro__thumb">
+                                <a href="#">
+                                    <img src="'{{ MEDIA_URL }}{{ item.product.image }}'" alt="product images">
+                                </a>
+                            </div>
+                            <div class="shp__pro__details">
+                                <h2><a href="product-details.html">{{ item.product.name }}</a></h2>
+                                <span class="quantity">{{item.quantity}}</span>
+                                <span class="shp__price">{{ item.product.price }}</span>
+                            </div>
+                            <div class="remove__btn">
+                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <ul class="shoping__total">
+                        <li class="subtotal">Subtotal:</li>
+                        <li class="total__price">{{ total }}</li>
+                    </ul>
+                    <ul class="shopping__btn">
+                        <li><a href="{% url 'view_cart' %}">View Cart</a></li>
+                        <li class="shp__checkout"><a href="{% url 'checkout' %}">Checkout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Cart Panel -->
