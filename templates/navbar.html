@@ -152,8 +152,12 @@
                                 <a href="{% url 'logout' %}"><i class="icon-logout icons"></i></a>
                             </div>
                             {% else %}
-                            <li><a href="{% url 'register' %}">Register</a></li>
-                            <li><a href="{% url 'login' %}">Log In</a></li>
+                            <div class="header__account">
+                                <a href="{% url 'register' %}"><i class="icon-register icons"></i></a>
+                            </div>
+                            <div class="header__account">
+                                <a href="{% url 'login' %}"><i class="icon-login icons"></i></a>
+                            </div>
                             {% endif %}
                             <div class="htc__shopping__cart">
                                 <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
@@ -173,41 +177,6 @@
     <!-- End Mainmenu Area -->
 </header>
 <!-- End Header Area -->
-
-
-<!-- Fixed masthead -->
-<!--    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">-->
-<!--    <div class="container">-->
-<!--        <div class="navbar-header">-->
-<!--            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
-<!--                <span class="sr-only">Toggle navigation</span>-->
-<!--                <span class="icon-bar"></span>-->
-<!--                <span class="icon-bar"></span>-->
-<!--                <span class="icon-bar"></span>-->
-<!--            </button>-->
-<!--            <a class="navbar-brand" href="/">Ecommerce</a>-->
-<!--        </div>-->
-<!--        <div id="navbar" class="navbar-collapse collapse">-->
-<!--            <ul class="nav navbar-nav navbar-right">-->
-<!--                {% if user.is_authenticated %}-->
-<!--                    <li><a href="{% url 'profile' %}">Profile</a></li>-->
-<!--                    <li><a href="{% url 'logout' %}">Log Out</a></li>-->
-<!--                {%  else %}-->
-<!--                    <li><a href="{% url 'register' %}">Register</a></li>-->
-<!--                    <li><a href="{% url 'login' %}">Log In</a></li>-->
-<!--                {% endif %}-->
-<!--                <li>-->
-<!--                    <a href="{% url 'view_cart' %}">-->
-<!--                        <i class="fa fa-shipping-cart"></i>Cart-->
-<!--                        {% if product_count > 0 %}-->
-<!--                        <label class="badge badge-warning">{{ product_count }}</label>-->
-<!--                        {% endif %}-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
 
 
 

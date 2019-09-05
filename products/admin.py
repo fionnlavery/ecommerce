@@ -6,8 +6,8 @@ from .models import Product
 # product changes to Admin Panel
 class ProductAdmin(admin.ModelAdmin):
     search_fields = ['name','description']
-    list_display = ['name', 'price', 'active']
-    list_editable = ['price','active']
+    list_display = ['name', 'price', 'active','old_price']
+    list_editable = ['price','active','old_price']
     list_filter = ['price', 'active']
     class Meta:
         model = Product
