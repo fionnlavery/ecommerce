@@ -8,3 +8,35 @@
 /* ----------------------------------------------------
 	You can put your custom css code here: 
 -------------------------------------------------------*/
+.add-to-cart-button {
+    background: #fefefe none repeat scroll 0 0;
+    display: inline-block;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+    width: 50px;
+}
+
+.add-to-cart-button i {
+    color: #313131;
+    font-size: 18px;
+    transition: all 0.4s ease 0s;
+}
+
+
+.add-to-cart-button:hover {
+    background: #ffffff none repeat scroll 0 0;
+    display: inline-block;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+    width: 50px;
+}
+
+.add-to-cart-button i {
+    color: #313131;
+    font-size: 18px;
+    transition: all 0.4s ease 0s;
+}

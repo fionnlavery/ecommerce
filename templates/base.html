@@ -34,12 +34,25 @@
     <div class="wrapper">
         <!-- Start Header Style -->
         {% include 'navbar.html' %}
-        <!--{% include 'slider.html' %}    -->
-        <div class='container'>    
+                
+        {% if messages %}
+        <div class="alert alert-success">
+            <div class="messages">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
         
         {% block content %} {% endblock %}
+        <div class='container'>    
+        
+
         
         </div>
+        
         
         <!-- Start Footer Area -->
         <footer id="htc__footer">
@@ -146,7 +159,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="copyright__inner">
-                                <p>Copyright© <a href="https://freethemescloud.com/">Free themes Cloud</a> 2018. All right reserved.</p>
+                                <p>Copyright© <a href="/">ARCH.BAY</a> 2019. All right reserved.</p>
                                 <a href="#"><img src="images/others/shape/paypol.png" alt="payment images"></a>
                             </div>
                         </div>
@@ -176,15 +189,7 @@
 
 
     
-    {% if messages %}
-        <div class="alert alert-success">
-            <div class="messages">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
+
     
 </body>
 </html>
