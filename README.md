@@ -44,6 +44,7 @@ A multi page website with
 - search functionality
 - form validation
 - messaging system shows if payments was processed and form validation
+- images served from AWS S3 bucket
 
 Django Backend
 - Allows easy and user friendly admin functions
@@ -57,7 +58,7 @@ Django Backend
 
 ## Technologies Used
 
-- This project uses HTML and CSS programming languages.
+- This project uses Python, JavaScript, HTML and CSS programming languages.
  
 - [JQuery](https://jquery.com)
     - The website uses **JQuery** as part of the Materialize  components.
@@ -66,8 +67,20 @@ Django Backend
     - This developer used **AWS Cloud9** for their IDE while building the website.
 
 - [Heroku](https://www.heroku.com)
-  -The website uses the platform as a service (PaaS) **heroku** to automatically deploy the website
+  -The website uses the platform as a service (PaaS) **heroku** to automatically deploy the website and provide a postgres database
  
+- [Django](https://docs.djangoproject.com/en/1.11/releases/1.11/)
+  -The website uses **Django 1.11** as a python frame work to quickly and easily hook up a full featured site
+ 
+- [Free Themes Cloud](https://freethemescloud.com/item/asbab-free-furniture-ecommerce-html5-template/)
+  -The website uses the Bootstrap template **ASBAB Furniture Theme** as base for the site
+
+- [AWS S3](https://aws.amazon.com/s3/)
+  -The website uses **S3** to serve images for products
+ 
+
+- [Bootstrap](https://www.bootstrap.com)
+  -The website uses **bootstrap** as part of the ASBAB responsive theme
 
 ## Testing
 - I clicked all links and ensured they went to the right location, I tested the browser on Firefox & Brave(Chromium fork). 
@@ -82,13 +95,13 @@ Django Backend
 
 ## Deployment
 
-This website was deployed using heroku and you can check it out [here](https://flask-automatic-deploys-fl.herokuapp.com/)
+This website was deployed using heroku and you can check it out [here](https://ecommerce-fl.herokuapp.com/)
 
 ### Media
 
-- Recipe entrys were taken from BBC Recipes website
-- Pixabay for royalty free slider images
+- Recipe entrys were taken from Wikipedia Recipes website
+- Pixabay for royalty free images
 
 ### Acknowledgements
 
-- I received inspiration for this project from Giulia and her amazing cooking
+- Thanks to Code Institute and my class mates for helping along the way.
