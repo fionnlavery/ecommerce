@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '6b01ad552ca9437fb07ca0fda5756be7.vfs.cloud9.us-east-2.amazonaws.com']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '6b01ad552ca9437fb07ca0fda5756be7.vfs.cloud9.us-east-2.amazonaws.com', 'heroku logs --tail']
 
 
 
