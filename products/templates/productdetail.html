@@ -8,44 +8,32 @@
                         <a href="#"><i class="zmdi zmdi-close"></i></a>
                     </div>
                     <div class="shp__cart__wrap">
+                        {% for item in cart_items %}
+                        {% csrf_token %}
                         <div class="shp__single__product">
                             <div class="shp__pro__thumb">
                                 <a href="#">
-                                    <img src="images/product-2/sm-smg/1.jpg" alt="product images">
+                                    <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="product images">
                                 </a>
                             </div>
                             <div class="shp__pro__details">
-                                <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$105.00</span>
+                                <h2><a href="product-details.html">{{ item.product.name }}</a></h2>
+                                <span class="shp__price">{{ item.product.price }}</span>
                             </div>
                             <div class="remove__btn">
                                 <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
                             </div>
                         </div>
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="images/product-2/sm-smg/2.jpg" alt="product images">
-                                </a>
-                            </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details.html">Brone Candle</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$25.00</span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
+                        {% endfor %}
+
                     </div>
                     <ul class="shoping__total">
                         <li class="subtotal">Subtotal:</li>
-                        <li class="total__price">$130.00</li>
+                        <li class="total__price">{{ total }}</li>
                     </ul>
                     <ul class="shopping__btn">
-                        <li><a href="cart.html">View Cart</a></li>
-                        <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
+                        <li><a href="{% url 'view_cart' %}">View Cart</a></li>
+                        <li class="shp__checkout"><a href="{% url 'checkout' %}">Checkout</a></li>
                     </ul>
                 </div>
             </div>
@@ -98,6 +86,14 @@
                                     </div>
                                     
                                 </div>
+                                <div class="fr__hover__info">
+                                <ul class="product__action">
+                                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                    {% csrf_token %}
+                                    <li><button class='add-to-cart-button' type='submit'><i class="icon-plus icons"></i></button></li>
+                                    <input style='display:none' name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" value="1">
+                                </ul>
+                            </div>
                             </div>
                         </div>
                     </div>
