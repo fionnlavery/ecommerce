@@ -90,7 +90,7 @@
                                     <button>
                                     <form method="post" action="{% url 'add_to_cart' product.id %}">
                                     {% csrf_token %}
-                                    <li><button class='add-to-cart-button' type='submit'><i class="icon-plus icons"></i></button></li>
+                                    <button class='add-to-cart-button' type='submit'><i class="icon-plus icons"></i></button>
                                     <input style='display:none' name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" value="1">
                                     </button>
                
