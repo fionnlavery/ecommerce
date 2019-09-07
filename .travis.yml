@@ -6,5 +6,4 @@ env:
   global:
     SECRET_KEY="whatever"
 script:
-  - cd src
   - python manage.py test
