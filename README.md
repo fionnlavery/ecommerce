@@ -91,7 +91,7 @@ Django Backend
 
 ## Issues yet to be resolved
 
-
+Reset password works but I dont have my email creds hooked up for security reasons
 
 ## Deployment
 
