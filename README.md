@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/fionnlavery/ecommerce.svg?branch=master)](https://travis-ci.org/fionnlavery/ecommerce)
-## Interactive Recipe Website Website
+## Interactive Ecommerce Website
 Stream Four Project: Fullstack Development Milestone Project  - Code Institute
 
 Access the  deployed website here: https://https://ecommerce-fl.herokuapp.com/
