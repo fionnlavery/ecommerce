@@ -2,7 +2,7 @@
 ## Interactive Ecommerce Website
 Stream Four Project: Fullstack Development Milestone Project  - Code Institute
 
-Access the  deployed website here: https://https://ecommerce-fl.herokuapp.com/
+Access the  deployed website here: https://ecommerce-fl.herokuapp.com/
 This website is a basic ecommerce site utilizing Django connected to postgres database.
 It allows users to browse items for sale, add them to their cart and purchase them after registering and logging in.
 It incluses an Admin dashboard where new products can be added to the website.
